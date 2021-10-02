@@ -2620,13 +2620,14 @@ ul.nav li.dropdown .dropdown_menu li.dropdown_submenu:hover .dropdown_menu {
 	border: 1px solid #eeeeee;
 	font-weight: 600;
 	padding: 3px 8px;
-	display: inline;
+	display: inline-block;
 	list-style: none;
 	margin-right: 5px;
 	border-radius:4px;
 	text-transform:uppercase;
 	text-align: center;
 	font-size: 12px;
+  margin-bottom: 10px;
 }
 .post-tags a:hover {
 	background: #ec0000;

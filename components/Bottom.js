@@ -7,9 +7,6 @@ import Image from 'next/image';
 import Home from '/public/images/home.webp';
 import Search from '/public/images/search.webp';
 
-
-
-
 export default function Bottombar() {
     const router = useRouter()
     const [error, setError] = useState();
@@ -46,6 +43,11 @@ export default function Bottombar() {
         }
     }
 
+    const handleClick = (e) => {
+        e.preventDefault()
+        router.push(href)
+      }
+
 
 
     return (
@@ -74,7 +76,8 @@ export default function Bottombar() {
                                                 </Link>
                                             </li>
                                             {menus && menus.map((menu, i) => (
-                                                <li key={i} className="nav-item categories"><Link activeClassName="active" href={`/category/${menu.slug}`}><a>{menu.name}</a></Link>
+                                                <li key={i} className="nav-item categories"><Link className={
+                                                    router.pathname === `/category/${menu.slug}` ? 'nav-link active' : 'nav-link inactive'} href={`/category/${menu.slug}`}><a>{menu.name}</a></Link>
                                                 </li>
                                             ))}
                                         </ul>

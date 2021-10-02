@@ -36,7 +36,7 @@ const next = post.next != null ? <div className="post-next">
         <meta name="description" content={p.meta_desc} />
         <meta property="og:description" content={p.meta_desc} />
         <meta name="twitter:description" content={p.meta_desc} />
-        <meta property="og:url" content="https://nitinpatil.vercel.app" />
+        <meta property="og:url" content={`https://nitinpatil.vercel.app/${p.slug}`} />
         <meta property="og:image" content={"https:" + p.img_2} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
